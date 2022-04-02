@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[DichVu]
+(
+[MaDV] [char] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[TenDichVu] [nvarchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[GiaTien] [money] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[DichVu] ADD CONSTRAINT [PK__DichVu__272586576572F315] PRIMARY KEY CLUSTERED  ([MaDV]) ON [PRIMARY]
+GO

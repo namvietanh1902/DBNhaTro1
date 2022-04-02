@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[HoaDon]
+(
+[MaHD] [char] (6) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[MaPhong] [char] (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TienPhong] [money] NULL,
+[TienDichVu] [money] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[HoaDon] ADD CONSTRAINT [PK__HoaDon__2725A6E0A4E6D370] PRIMARY KEY CLUSTERED  ([MaHD]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[HoaDon] ADD CONSTRAINT [FK__HoaDon__MaPhong__3E52440B] FOREIGN KEY ([MaPhong]) REFERENCES [dbo].[PhongTro] ([MaPhong]) ON DELETE CASCADE ON UPDATE CASCADE
+GO
